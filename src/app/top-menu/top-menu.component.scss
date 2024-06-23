@@ -1,0 +1,42 @@
+div.top {
+  background-color: #e0d6ff;
+  height: 57px;
+
+  span {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    //color: #36013F;
+    color: purple;
+    //border: solid;
+  }
+
+  span.app-name {
+    padding-left: 10px;
+  }
+
+  span.right {
+    float: right;
+    //padding-right: 10px;
+  }
+
+  button{
+    margin-right: 20px;
+
+    //color: #36013F;
+    //transform: scale(2);
+    //border: solid;
+  }
+
+  button.profile {
+    //float: right;
+    //padding-right: 50px;
+  }
+
+  button.dots {
+    //float: right;
+    //padding-right: 50px;
+  }
+}
