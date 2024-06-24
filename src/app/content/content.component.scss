@@ -1,0 +1,26 @@
+.row {
+  display: table;
+  width: 100%;
+  height: 100%;
+  //table-layout: fixed;
+  //border-spacing: 10px;
+}
+.column1 {
+  width: 20%;
+  height: 100%;
+  display: table-cell;
+  border-right: purple solid 2px;
+  background-color: lightgrey;
+}
+.column2 {
+  width: 30%;
+  height: 100%;
+  display: table-cell;
+  border-right: purple solid 2px;
+  background-color: lightblue;
+
+}
+.column3 {
+  display: table-cell;
+  background-color: lightcyan;
+}

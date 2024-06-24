@@ -1,0 +1,34 @@
+ <div *ngIf="loading">Loading...</div>
+ <div *ngIf="error">{{error}}</div>
+
+ <form class="example-form" (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
+
+   <mat-form-field class="example-full-width">
+     <mat-label>Email</mat-label>
+     <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+            placeholder="Ex. pat@example.com">
+     <mat-hint>Errors appear instantly!</mat-hint>
+     @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+       <mat-error>Please enter a valid email address</mat-error>
+     }
+     @if (emailFormControl.hasError('required')) {
+       <mat-error>Email is <strong>required</strong></mat-error>
+     }
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+     <mat-label>Password</mat-label>
+     <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+     <mat-hint>Errors appear instantly!</mat-hint>
+
+     @if (passwordFormControl.hasError('required')) {
+       <mat-error>Password is <strong>required</strong></mat-error>
+     }
+   </mat-form-field>
+
+   <button type="submit">{{isLoginMode ? 'Login' : 'Signup'}}</button>
+   <br />
+   <button type="button" (click)="onSwitchMode()" >
+    Switch to {{ isLoginMode ? 'Signup' : 'Login'}}
+   </button>
+ </form>
